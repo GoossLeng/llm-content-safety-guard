@@ -1,0 +1,30 @@
+{
+  "_note": "LoRA 微调配置，对应方案 2.6 节。单卡 16GB 可按此配置跑 4B 模型。",
+  "base_model": "Qwen/Qwen3.5-4B-Instruct",
+  "train_file": "work/train_harmful.jsonl",
+  "val_file": "work/train_benign.jsonl",
+  "lora": {
+    "r": 32,
+    "lora_alpha": 64,
+    "lora_dropout": 0.05,
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+  },
+  "training": {
+    "learning_rate": 1e-5,
+    "num_train_epochs": 2,
+    "per_device_train_batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "max_seq_length": 1024,
+    "lr_scheduler_type": "cosine",
+    "warmup_ratio": 0.03,
+    "bf16": true,
+    "gradient_checkpointing": true,
+    "logging_steps": 10,
+    "save_steps": 200
+  },
+  "expected_usage": {
+    "gpu": "单卡 16GB（RTX 5060 Ti 可跑；bf16 + 梯度检查点，峰值显存约 10-12GB）",
+    "time": "2 epochs / 约 2,000 条，约 3-5 小时",
+    "adapter_size": "约 80-120MB（r=32，7 个投影层）"
+  }
+}

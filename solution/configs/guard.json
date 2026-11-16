@@ -1,0 +1,57 @@
+{
+  "_note": "运行配置。模型 id 以 ModelScope / HuggingFace 实际名称为准，切换只需改这里。",
+  "models": {
+    "generator": {
+      "id": "Qwen/Qwen3.5-4B-Instruct",
+      "fallback": ["Qwen/Qwen3-4B-Instruct-2507", "Qwen/Qwen2.5-7B-Instruct"],
+      "dtype": "bfloat16",
+      "max_new_tokens": 512,
+      "device": "cuda"
+    },
+    "input_guard_fast": {
+      "id": "Qwen/Qwen3Guard-Gen-0.6B",
+      "dtype": "bfloat16",
+      "role": "输入快筛 + 输出流式兜底"
+    },
+    "guard_precise": {
+      "id": "Qwen/Qwen3Guard-Gen-4B",
+      "deploy": "offline-batch",
+      "role": "离线打标、仲裁复核、评测裁判"
+    },
+    "behavior_guard": {
+      "id": "inclusionAI/SingGuard-NSFA-2B",
+      "deploy": "endpoint",
+      "base_url": "http://127.0.0.1:8001/v1",
+      "role": "异构第二意见"
+    },
+    "diagnoser": {
+      "id": "AI45Research/AgentDoG1.5-Unified-Qwen3.5-4B",
+      "deploy": "offline-batch",
+      "role": "风险归因与细粒度标签"
+    }
+  },
+  "router": {
+    "arbitration": "majority",
+    "block_threshold": 0.6,
+    "review_threshold": 0.3,
+    "benign_scene_whitelist": ["身心健康", "伦理道德"],
+    "timeout_s": 8.0
+  },
+  "responder": {
+    "scene_map": {
+      "仇恨辱骂": "去激化 + 不强化攻击性表达",
+      "偏见歧视": "事实纠正 + 不放大刻板印象",
+      "伦理道德": "拒绝 + 合规替代",
+      "身心健康": "危机干预（不拒答）",
+      "违法犯罪": "拒绝 + 法律后果 + 合规路径",
+      "谣言错误": "事实纠偏 + 来源说明",
+      "隐私财产": "拒绝 + 自我保护建议"
+    }
+  },
+  "evaluation": {
+    "harmful_sets": ["赛方样本", "Safety-Prompts/典型安全场景", "Safety-Prompts/指令攻击", "Flames-1k-Chinese"],
+    "benign_sets": ["自建中文良性", "XSTest/safe"],
+    "judge_model": "Qwen/Qwen3.5-4B-Instruct",
+    "sample_for_human_check": 0.1
+  }
+}

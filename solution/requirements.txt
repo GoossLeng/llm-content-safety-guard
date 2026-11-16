@@ -1,0 +1,14 @@
+# 运行依赖
+# 说明：A 级实验（数据剖析、规则层评测）只依赖 pandas/openpyxl，不需要 torch。
+# 模型层（--backend qwen3guard / nsfa / agentdog）才需要 torch 与 transformers。
+
+pandas>=2.0
+openpyxl>=3.1
+
+# 以下仅在接真实模型时需要，RTX 50 系（sm_120）请使用 cu128 轮子：
+# pip install torch>=2.7.0 --index-url https://download.pytorch.org/whl/cu128
+# torch>=2.7.0
+# transformers>=4.56.0
+# accelerate>=0.34.0
+# peft>=0.13.0
+# bitsandbytes>=0.44.0

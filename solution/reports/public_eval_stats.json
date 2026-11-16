@@ -1,0 +1,96 @@
+{
+  "seed": 42,
+  "total": 620,
+  "by_source": {
+    "Safety-Prompts/典型安全场景": 200,
+    "Safety-Prompts/指令攻击": 100,
+    "Flames-1k-Chinese": 120,
+    "XSTest/safe": 100,
+    "自建中文良性": 100
+  },
+  "by_label": {
+    "harmful": 420,
+    "benign": 200
+  },
+  "by_lang": {
+    "zh": 520,
+    "en": 100
+  },
+  "by_category": {
+    "Safety-Prompts/典型安全场景|Insult": 29,
+    "Safety-Prompts/典型安全场景|Unfairness_And_Discrimination": 29,
+    "Safety-Prompts/典型安全场景|Crimes_And_Illegal_Activities": 29,
+    "Safety-Prompts/典型安全场景|Physical_Harm": 29,
+    "Safety-Prompts/典型安全场景|Mental_Health": 28,
+    "Safety-Prompts/典型安全场景|Privacy_And_Property": 28,
+    "Safety-Prompts/典型安全场景|Ethics_And_Morality": 28,
+    "Safety-Prompts/指令攻击|Goal_Hijacking": 17,
+    "Safety-Prompts/指令攻击|Prompt_Leaking": 17,
+    "Safety-Prompts/指令攻击|Role_Play_Instruction": 17,
+    "Safety-Prompts/指令攻击|Unsafe_Instruction_Topic": 17,
+    "Safety-Prompts/指令攻击|Inquiry_With_Unsafe_Opinion": 16,
+    "Safety-Prompts/指令攻击|Reverse_Exposure": 16,
+    "Flames-1k-Chinese|Fairness": 30,
+    "Flames-1k-Chinese|Safety": 51,
+    "Flames-1k-Chinese|Morality": 24,
+    "Flames-1k-Chinese|Legality": 6,
+    "Flames-1k-Chinese|Data protection": 9,
+    "XSTest/safe|safe_contexts": 13,
+    "XSTest/safe|historical_events": 13,
+    "XSTest/safe|nons_group_real_discr": 7,
+    "XSTest/safe|privacy_fictional": 13,
+    "XSTest/safe|privacy_public": 12,
+    "XSTest/safe|definitions": 8,
+    "XSTest/safe|real_group_nons_discr": 7,
+    "XSTest/safe|figurative_language": 9,
+    "XSTest/safe|safe_targets": 12,
+    "XSTest/safe|homonyms": 6,
+    "自建中文良性|通用知识问答": 15,
+    "自建中文良性|科技与工程": 12,
+    "自建中文良性|医疗健康咨询": 12,
+    "自建中文良性|情绪与心理支持": 12,
+    "自建中文良性|法律与维权": 12,
+    "自建中文良性|安全防护知识": 12,
+    "自建中文良性|教育与育儿": 10,
+    "自建中文良性|写作与表达": 8,
+    "自建中文良性|生活消费": 7
+  },
+  "by_kind": {
+    "harmful|instruction": 371,
+    "harmful|discussion": 49,
+    "benign|instruction": 196,
+    "benign|discussion": 4
+  },
+  "length": {
+    "min": 15,
+    "max": 152,
+    "mean": 41.7
+  },
+  "decon": {
+    "threshold": 0.3,
+    "dropped": 0,
+    "dropped_detail": [],
+    "max_overlap_kept": 0.046,
+    "max_overlap_all": 0.046
+  },
+  "dedup_dropped": 0,
+  "pool_sizes": {
+    "sp_typical_after_filter": 24146,
+    "sp_instruction_after_filter": 29469,
+    "flames_after_filter": 999,
+    "xstest_safe_after_filter": 250,
+    "benign_zh": 100
+  },
+  "raw_rows": {
+    "sp_typical": 70000,
+    "sp_instruction": 30000,
+    "flames": 1000,
+    "xstest_safe": 250
+  },
+  "licenses": {
+    "Safety-Prompts": "Apache-2.0",
+    "Flames-1k-Chinese": "Apache-2.0",
+    "XSTest": "CC-BY-4.0",
+    "自建中文良性": "team-authored"
+  }
+}

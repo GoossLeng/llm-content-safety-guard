@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+eggs/
+
+# 本机实验中间产物
+work/
+*.log
+*.tmp
+
+# 模型权重
+*.bin
+*.safetensors
+*.gguf
+*.pt
+*.pth
+
+# 环境
+.venv/
+venv/
+env/
+.env
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*~
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 报告与交付物（不随代码包分发）
+deliverables/
+*.docx
+*.pptx
+*.pdf
+
+# 会话日志与临时渲染
+work/render/
+work/fig2_ai/

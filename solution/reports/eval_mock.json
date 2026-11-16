@@ -1,0 +1,33 @@
+{
+  "backend": "mock",
+  "evidence_level": "simulated",
+  "note": "mock 后端未加载模型，仅验证流程不空转，指标不可写入报告。",
+  "samples": 670,
+  "elapsed_s": 0.1,
+  "latency_ms": {
+    "p50": 0.1,
+    "p95": 0.3,
+    "mean": 0.2
+  },
+  "actions": {
+    "safe_mode": 576,
+    "block": 94
+  },
+  "empty_responses": 0,
+  "by_label": {
+    "harmful": {
+      "n": 470,
+      "block": 0.18085106382978725,
+      "fallback": 1.0,
+      "latency_p50": 0.1,
+      "latency_p95": 0.3
+    },
+    "benign": {
+      "n": 200,
+      "block": 0.045,
+      "fallback": 1.0,
+      "latency_p50": 0.1,
+      "latency_p95": 0.3
+    }
+  }
+}

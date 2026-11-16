@@ -1,0 +1,274 @@
+{
+  "configs": {
+    "C1": {
+      "name": "仅编码解码",
+      "official_harmful": {
+        "blocked": 2,
+        "total": 50,
+        "rate": 0.04
+      },
+      "public_harmful": {
+        "blocked": 0,
+        "total": 420,
+        "rate": 0.0
+      },
+      "benign_false_positive": {
+        "blocked": 0,
+        "total": 200,
+        "rate": 0.0
+      },
+      "by_source": {
+        "Flames-1k-Chinese|harmful": {
+          "blocked": 0,
+          "total": 120,
+          "rate": 0.0
+        },
+        "Safety-Prompts/典型安全场景|harmful": {
+          "blocked": 0,
+          "total": 200,
+          "rate": 0.0
+        },
+        "Safety-Prompts/指令攻击|harmful": {
+          "blocked": 0,
+          "total": 100,
+          "rate": 0.0
+        },
+        "XSTest/safe|benign": {
+          "blocked": 0,
+          "total": 100,
+          "rate": 0.0
+        },
+        "自建中文良性|benign": {
+          "blocked": 0,
+          "total": 100,
+          "rate": 0.0
+        },
+        "赛方样本|harmful": {
+          "blocked": 2,
+          "total": 50,
+          "rate": 0.04
+        }
+      },
+      "official_by_scene": {
+        "仇恨辱骂": {
+          "blocked": 0,
+          "total": 7,
+          "rate": 0.0
+        },
+        "伦理道德": {
+          "blocked": 0,
+          "total": 8,
+          "rate": 0.0
+        },
+        "偏见歧视": {
+          "blocked": 0,
+          "total": 7,
+          "rate": 0.0
+        },
+        "谣言错误": {
+          "blocked": 0,
+          "total": 7,
+          "rate": 0.0
+        },
+        "身心健康": {
+          "blocked": 1,
+          "total": 7,
+          "rate": 0.143
+        },
+        "违法犯罪": {
+          "blocked": 0,
+          "total": 7,
+          "rate": 0.0
+        },
+        "隐私财产": {
+          "blocked": 1,
+          "total": 7,
+          "rate": 0.143
+        }
+      }
+    },
+    "C2": {
+      "name": "解码 + 包装剥离",
+      "official_harmful": {
+        "blocked": 31,
+        "total": 50,
+        "rate": 0.62
+      },
+      "public_harmful": {
+        "blocked": 77,
+        "total": 420,
+        "rate": 0.183
+      },
+      "benign_false_positive": {
+        "blocked": 16,
+        "total": 200,
+        "rate": 0.08
+      },
+      "by_source": {
+        "Flames-1k-Chinese|harmful": {
+          "blocked": 11,
+          "total": 120,
+          "rate": 0.092
+        },
+        "Safety-Prompts/典型安全场景|harmful": {
+          "blocked": 45,
+          "total": 200,
+          "rate": 0.225
+        },
+        "Safety-Prompts/指令攻击|harmful": {
+          "blocked": 21,
+          "total": 100,
+          "rate": 0.21
+        },
+        "XSTest/safe|benign": {
+          "blocked": 0,
+          "total": 100,
+          "rate": 0.0
+        },
+        "自建中文良性|benign": {
+          "blocked": 16,
+          "total": 100,
+          "rate": 0.16
+        },
+        "赛方样本|harmful": {
+          "blocked": 31,
+          "total": 50,
+          "rate": 0.62
+        }
+      },
+      "official_by_scene": {
+        "仇恨辱骂": {
+          "blocked": 3,
+          "total": 7,
+          "rate": 0.429
+        },
+        "伦理道德": {
+          "blocked": 4,
+          "total": 8,
+          "rate": 0.5
+        },
+        "偏见歧视": {
+          "blocked": 6,
+          "total": 7,
+          "rate": 0.857
+        },
+        "谣言错误": {
+          "blocked": 3,
+          "total": 7,
+          "rate": 0.429
+        },
+        "身心健康": {
+          "blocked": 6,
+          "total": 7,
+          "rate": 0.857
+        },
+        "违法犯罪": {
+          "blocked": 5,
+          "total": 7,
+          "rate": 0.714
+        },
+        "隐私财产": {
+          "blocked": 4,
+          "total": 7,
+          "rate": 0.571
+        }
+      }
+    },
+    "C3": {
+      "name": "解码 + 剥离 + 良性保护",
+      "official_harmful": {
+        "blocked": 29,
+        "total": 50,
+        "rate": 0.58
+      },
+      "public_harmful": {
+        "blocked": 56,
+        "total": 420,
+        "rate": 0.133
+      },
+      "benign_false_positive": {
+        "blocked": 9,
+        "total": 200,
+        "rate": 0.045
+      },
+      "by_source": {
+        "Flames-1k-Chinese|harmful": {
+          "blocked": 8,
+          "total": 120,
+          "rate": 0.067
+        },
+        "Safety-Prompts/典型安全场景|harmful": {
+          "blocked": 34,
+          "total": 200,
+          "rate": 0.17
+        },
+        "Safety-Prompts/指令攻击|harmful": {
+          "blocked": 14,
+          "total": 100,
+          "rate": 0.14
+        },
+        "XSTest/safe|benign": {
+          "blocked": 0,
+          "total": 100,
+          "rate": 0.0
+        },
+        "自建中文良性|benign": {
+          "blocked": 9,
+          "total": 100,
+          "rate": 0.09
+        },
+        "赛方样本|harmful": {
+          "blocked": 29,
+          "total": 50,
+          "rate": 0.58
+        }
+      },
+      "official_by_scene": {
+        "仇恨辱骂": {
+          "blocked": 2,
+          "total": 7,
+          "rate": 0.286
+        },
+        "伦理道德": {
+          "blocked": 4,
+          "total": 8,
+          "rate": 0.5
+        },
+        "偏见歧视": {
+          "blocked": 6,
+          "total": 7,
+          "rate": 0.857
+        },
+        "谣言错误": {
+          "blocked": 3,
+          "total": 7,
+          "rate": 0.429
+        },
+        "身心健康": {
+          "blocked": 5,
+          "total": 7,
+          "rate": 0.714
+        },
+        "违法犯罪": {
+          "blocked": 5,
+          "total": 7,
+          "rate": 0.714
+        },
+        "隐私财产": {
+          "blocked": 4,
+          "total": 7,
+          "rate": 0.571
+        }
+      }
+    }
+  },
+  "thresholds": {
+    "C1_C2": "场景词典分>=2",
+    "C3": "可疑度>=0.35"
+  },
+  "timing_ms": {
+    "C1": 15.6,
+    "C2": 34.6,
+    "C3": 53.9
+  }
+}
